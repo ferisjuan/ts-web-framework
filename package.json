@@ -1,0 +1,23 @@
+{
+	"name": "web",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start:dev": "parcel index.html"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ferisjuan/ts-web-framework.git"
+	},
+	"author": "Juan Feris",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ferisjuan/ts-web-framework/issues"
+	},
+	"homepage": "https://github.com/ferisjuan/ts-web-framework#readme",
+	"devDependencies": {
+		"parcel": "^2.0.0-beta.1",
+		"typescript": "^4.2.3"
+	}
+}
