@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "parcel index.html"
+		"start:dev": "parcel index.html",
+		"start:db": "json-server -w db.json",
+		"start": "concurrently npm:start:*"
 	},
 	"repository": {
 		"type": "git",
@@ -17,7 +19,11 @@
 	},
 	"homepage": "https://github.com/ferisjuan/ts-web-framework#readme",
 	"devDependencies": {
+		"concurrently": "^6.0.0",
 		"parcel": "^2.0.0-beta.1",
 		"typescript": "^4.2.3"
+	},
+	"dependencies": {
+		"axios": "^0.21.1"
 	}
 }
