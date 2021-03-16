@@ -1,13 +1,9 @@
-import { User } from './models/User'
+import { Collection } from './models/Collection'
 
-const user = User.create({
-	id: 3,
-	name: 'Carlos',
-	age: 42,
+const collection = new Collection('http://localhost:3000/users')
+
+collection.on('change', () => {
+	console.log(collection)
 })
 
-user.on('fetch', () => {
-	console.log(user)
-})
-
-user.fetch()
+collection.fetch()
