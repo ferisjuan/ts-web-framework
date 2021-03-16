@@ -1,13 +1,9 @@
-import { Collection } from './models/Collection'
-import { User, UserProps } from './models/User'
+import { User } from './models/User'
 
-const collection = new Collection<User, UserProps>(
-	'http://localhost:3000/users',
-	(json: UserProps): User => User.create(json)
-)
+const collection = User.createCollection()
 
 collection.on('change', () => {
-	console.log(collection.models)
+	console.log(collection)
 })
 
 collection.fetch()
