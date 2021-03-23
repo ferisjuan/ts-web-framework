@@ -60,6 +60,7 @@ export class Model<T extends hasId> {
 
 	save(): void {
 		const data = this.attributes.getAll()
+
 		this.sync
 			.save(data)
 			.then((response: AxiosResponse): void => {
